@@ -74,7 +74,8 @@ I live in charming <a href="https://www.turismocoruna.com/web/" target="_blank">
 <p>
 Last updated:
 <script>
-document.write(document.lastModified.toISOString());
+const event = new Date(document.lastModified);
+document.write(event.toString());
 </script>
 </p>
 </body>
