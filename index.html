@@ -144,17 +144,50 @@ See our <a href="https://huggingface.co/mmaguero" target="_blank">Guarani (gn) B
       <p id="caption"></p>
     </div>
   </div>
+  
+    <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>marvin(hyphen)aguero(at)hotmail(dot)com</p>
+    <!--<form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form> -->
+  </div>
 
 <!-- End page content -->
 </div>
 
-<footer id="contact" class="w3-container w3-blue">
-  <h5>Contact: <i>marvin(hyphen)aguero(at)hotmail(dot)com</i></h5>
-<p> Last updated:
+<!-- Footer Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-right">Last updated: 
+ <script>
+  const event = new Date(document.lastModified);
+  document.write(event.toString());
+ </script>
+  </p>
+</div>
+
 <script>
-const event = new Date(document.lastModified);
-document.write(event.toString());
-  
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -174,9 +207,6 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 </script>
-</p>
- 
-</footer>
 
 </body>
 </html>
