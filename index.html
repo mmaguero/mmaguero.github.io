@@ -15,25 +15,55 @@ Marvin M. Agüero-Torales's Web Page
   gtag('config', 'G-2BX94FRQNP');
 </script>
 
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
 </head>
 <body>
-  
-<header class="w3-container w3-blue">
-  <!--<h1>Marvin Matías Agüero Torales</h1>-->
-  <h1 class="w3-xxxlarge w3-text-white"><b>Marvin Matías Agüero Torales.</b></h1>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Marvin M.<br>Agüero-Torales</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#aboutme" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Me</a> 
+    <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research and projects</a> 
+    <a href="#misc" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Misc</a> 
+    <!--<a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a>-->
+    <a href="#contact" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Marvin Matías Agüero Torales</span>
 </header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
 
 <center>
 <img src="https://lh3.googleusercontent.com/pw/AM-JKLXna9q6CUqKdnnGyKJKHaS1b-mOLdhceW4hZXuJ-sMmhjzbfm_AMJbj9l2pLRxu68RIxpGTH83v2PqYl0VyxQdWYmcSKCCIVulC47YcAcfOVPAN5fM7j5nxuKJS-JGY0TvZhTbwYNai9pETg6epn4U6xA=w803-h602-no" alt="Me on the Tower of Hercules (A Coruña, Spain)" class="w3-margin w3-circle" style="width:50%">
   </center>
 
   <!-- About me -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-gray"><b>About me.</b></h1>
-    <hr style="width:50px;border:5px solid gray" class="w3-round">
+  <div class="w3-container" id="aboutme" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>About me.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
   
   <p>
 I am a data and computer scientist. I currently work as an applied researcher</a> on text mining and natural language processing (NLP) 
@@ -51,9 +81,9 @@ In general I am interested in the efficient exploitation of information containe
 </div>
   
   <!-- Projects -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-gray"><b>Research, projects and so on...</b></h1>
-    <hr style="width:50px;border:5px solid gray" class="w3-round">
+  <div class="w3-container" id="projects" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Research, projects and so on...</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
    
         <p>
   My <a href="http://hdl.handle.net/10481/72863" target="_blank">dissertation</a> is on ML approaches for topic discovery and sentiment analysis in multilingual/code-mixed opinions and low-resource languages. Where I studied text written in English, Spanish, <a href="https://en.wikipedia.org/wiki/Guarani_language" target="_blank">Guarani</a> and Guarani-Spanish code-switching (called <a href="https://en.wikipedia.org/wiki/Jopara" target="_blank">Jopará</a> and sometimes <a href="https://journals.openedition.org/nuevomundo/598" target="_blank" alt="(in Spanish)">Jehe'a</a>).
@@ -115,14 +145,27 @@ See our <a href="https://huggingface.co/mmaguero" target="_blank">Guarani (gn) B
     </div>
   </div>
 
+<!-- End page content -->
+</div>
 
-<footer class="w3-container w3-blue">
+<footer id="contact" class="w3-container w3-blue">
   <h5>Contact: <i>marvin(hyphen)aguero(at)hotmail(dot)com</i></h5>
 <p> Last updated:
 <script>
 const event = new Date(document.lastModified);
 document.write(event.toString());
   
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
